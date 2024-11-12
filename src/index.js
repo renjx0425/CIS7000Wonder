@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './App.css';
+import './styles/CharacterToggle.css';
+import './styles/PerspectiveSwitcher.css';
+import './styles/ReflectionModal.css';
+import './styles/Timeline.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
