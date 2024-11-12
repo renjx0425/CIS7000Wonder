@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import '../styles/PerspectiveSwitcher.css';
+import auggieIcon from '../assets/icons/auggie_icon.png';
+import jackIcon from '../assets/icons/jack_icon.png';
+
 
 const PerspectiveSwitcher = ({ perspectives }) => {
   const [currentPerspective, setCurrentPerspective] = useState(perspectives[0]);
@@ -14,7 +17,10 @@ const PerspectiveSwitcher = ({ perspectives }) => {
             style={{ backgroundColor: perspective.color }}
             onClick={() => setCurrentPerspective(perspective)}
           >
-            <img src={perspective.icon} alt={`${perspective.character} icon`} />
+            <img
+              src={perspective.character === "Auggie" ? auggieIcon : jackIcon}
+              alt={`${perspective.character} icon`}
+            />
           </button>
         ))}
       </div>
