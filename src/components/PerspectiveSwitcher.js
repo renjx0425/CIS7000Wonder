@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import './PerspectiveSwitcher.css';
+import '../styles/PerspectiveSwitcher.css';
 
 const PerspectiveSwitcher = ({ perspectives }) => {
   const [currentPerspective, setCurrentPerspective] = useState(perspectives[0]);
