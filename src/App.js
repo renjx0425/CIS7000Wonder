@@ -1,26 +1,26 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import ReadingPage from './pages/ReadingPage';
+import React, { useState } from 'react';
+import scenesData from './data/scenes.json';
+import SceneDisplay from './components/SceneDisplay';
+import Timeline from './components/Timeline';
+import ReflectionModal from './components/ReflectionModal';
 
 function App() {
+  const [currentScene, setCurrentScene] = useState(scenesData.scenes[0]);
+  const [showReflection, setShowReflection] = useState(false);
+
+  const handleSceneSelect = (scene) => {
+    setCurrentScene(scene);
+  };
+
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/read" component={ReadingPage} />
-      </Switch>
-    </Router>
+    <div className="App">
+      <Timeline scenes={scenesData.scenes} onSceneSelect={handleSceneSelect} />
+      <SceneDisplay scene={currentScene} />
+      {showReflection && (
+        <ReflectionModal prompts={currentScene.reflection_prompts} onClose={() => setShowReflection(false)} />
+      )}
+    </div>
   );
 }
 
 export default App;
-
-
-const e = React.createElement;
-
-function App() {
-  return e('div', null, 'Hello, this is a React app running without npm!');
-}
-
-ReactDOM.render(e(App), document.getElementById('root'));
