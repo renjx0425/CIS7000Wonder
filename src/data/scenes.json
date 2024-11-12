@@ -8,13 +8,13 @@
           "character": "Auggie",
           "text": "I felt like everyone was staring at me...",
           "color": "#FFD700",
-          "icon": "auggie_icon.png"
+          "icon": "/assets/icons/auggie_icon.png"
         },
         {
           "character": "Jack",
           "text": "I thought Auggie was really cool...",
           "color": "#87CEFA",
-          "icon": "jack_icon.png"
+          "icon": "/assets/icons/jack_icon.png"
         }
       ],
       "reflection_prompts": [
