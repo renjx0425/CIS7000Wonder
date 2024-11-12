@@ -1,19 +1,15 @@
 import React from 'react';
-import './ReflectionModal.css';
 
-function ReflectionModal({ prompts, onClose }) {
+const ReflectionModal = ({ prompts, onClose }) => {
   return (
-    <div className="modal">
-      <div className="modal-content">
-        <button onClick={onClose}>Close</button>
-        {prompts.map((prompt, index) => (
-          <div key={index} className="reflection-prompt">
-            <p>{prompt}</p>
-          </div>
-        ))}
-      </div>
+    <div className="reflection-modal">
+      <h2>Reflection</h2>
+      {prompts.map((prompt, index) => (
+        <p key={index}>{prompt}</p>
+      ))}
+      <button onClick={onClose}>Close</button>
     </div>
   );
-}
+};
 
 export default ReflectionModal;
