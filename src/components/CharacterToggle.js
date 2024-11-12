@@ -1,4 +1,5 @@
-import React from 'react';
+import auggieIcon from '../assets/icons/auggie_icon.png';
+import jackIcon from '../assets/icons/jack_icon.png';
 
 const CharacterToggle = ({ characters, onCharacterSelect }) => {
   return (
@@ -9,7 +10,10 @@ const CharacterToggle = ({ characters, onCharacterSelect }) => {
           style={{ backgroundColor: character.color }}
           onClick={() => onCharacterSelect(character)}
         >
-          <img src={character.icon} alt={`${character.name} icon`} />
+          <img
+            src={character.name === "Auggie" ? auggieIcon : jackIcon}
+            alt={`${character.name} icon`}
+          />
         </button>
       ))}
     </div>
