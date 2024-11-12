@@ -1,0 +1,27 @@
+{
+    "scenes": [
+      {
+        "scene_id": "1",
+        "title": "First Day of School",
+        "perspectives": [
+          {
+            "character": "Auggie",
+            "text": "I felt like everyone was staring...",
+            "color": "#FFD700",
+            "icon": "auggie_icon.png"
+          },
+          {
+            "character": "Jack",
+            "text": "I thought Auggie was really cool...",
+            "color": "#87CEFA",
+            "icon": "jack_icon.png"
+          }
+        ],
+        "reflection_prompts": [
+          "How do you think Auggie feels about his first day?",
+          "Why might Jack feel unsure?"
+        ]
+      }
+    ]
+  }
+  

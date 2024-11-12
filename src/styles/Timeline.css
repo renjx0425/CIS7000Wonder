@@ -1,0 +1,36 @@
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #fafafa;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .timeline button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: transform 0.2s;
+  }
+  
+  .timeline button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+  }
+  
+  .timeline button.active img {
+    border-color: #0066cc;
+    box-shadow: 0 0 5px #0066cc;
+  }
+  
+  .timeline button:hover {
+    transform: scale(1.1);
+  }
+  

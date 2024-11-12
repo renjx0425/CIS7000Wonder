@@ -1,0 +1,61 @@
+.perspective-switcher {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .character-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .character-tabs button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .character-tabs button:hover {
+    transform: scale(1.1);
+  }
+  
+  .character-tabs img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+  }
+  
+  .perspective-content {
+    padding: 15px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  .perspective-content h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .perspective-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Transition Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
